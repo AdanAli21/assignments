@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+// JAVASCRIPT ASSIGNMENT — if / else / else if
+
+// ============================================
+
+// Name: Syed Adan Ali
+
+// Date: _______________
+
+// ============================================
+
+<script>
+
+
+// Q1 — Even or Odd
+
+// Given a number, check if it is even or odd.
+
+// Expected output: "7 is Odd"
+
+
+
+let number = 7
+
+
+
+// Write your code here:
+if(number % 2 === 0)
+    {console.log(number + " is Even")}
+else{
+    console.log(number + " is Odd")
+}
+
+
+
+// ============================================
+
+
+
+// Q2 — Positive, Negative or Zero
+
+// Check if a number is positive, negative, or zero.
+
+// Expected output: "Negative number"
+
+
+
+let number2 = -5
+
+
+
+// Write your code here:
+
+if(number2 > 0){
+    console.log("Positive number")
+}
+else if(number2 < 0){
+    console.log("Negative number")
+}
+else{
+    console.log("Zero")
+}
+
+
+
+// ============================================
+
+
+
+// Q3 — Biggest of Two Numbers
+
+// Find which number is bigger. If equal, say so.
+
+// Expected output: "b is bigger"
+
+
+
+let a = 15
+
+let b = 20
+
+
+
+// Write your code here:
+
+if(a > b){
+    console.log("a is bigger")
+}
+else if(b > a){
+    console.log("b is bigger")
+}
+else{
+    console.log("Both are equal")
+}
+
+
+
+// ============================================
+
+
+
+// Q4 — Pass or Fail
+
+// Passing marks is 40.
+
+// Expected output: "Failed"
+
+
+
+let marks = 35
+
+
+
+// Write your code here:
+if(marks >= 40){
+    console.log("Passed")
+}
+else{
+    console.log("Failed")
+}
+
+
+
+
+// ============================================
+
+
+
+// Q5 — Child, Teen or Adult
+
+// 0-12 = Child
+
+// 13-17 = Teenager
+
+// 18+  = Adult
+
+// Expected output: "Teenager"
+
+
+
+let age = 14
+
+
+
+// Write your code here:
+
+if(age >= 0 && age <= 12){
+    console.log("Child")
+}
+else if(age >= 13 && age <= 17){
+    console.log("Teenager")
+}
+else if(age >= 18){
+    console.log("Adult")
+}
+else{
+    console.log("Invalid age")
+}
+
+
+
+// ============================================
+
+
+
+// Q6 — Hottest City
+
+// Print which city has higher temperature.
+
+// Expected output: "Lahore is hotter"
+
+
+
+let karachi = 38
+
+let lahore = 42
+
+
+
+// Write your code here:
+
+if(karachi > lahore){
+    console.log("Karachi is hotter")
+}
+else if(lahore > karachi){
+    console.log("Lahore is hotter")
+}
+else{
+    console.log("Both cities have the same temperature")
+}   
+
+
+
+// ============================================
+
+
+
+// Q7 — Discount Check
+
+// Bill 1000+ = 10% discount
+
+// Bill 500+  = 5% discount
+
+// Otherwise  = no discount
+
+// Expected output: "5% discount applied"
+
+
+
+let bill = 750
+
+
+
+// Write your code here:
+if(bill >= 1000){
+    console.log("10% discount applied")
+}
+else if(bill >= 500){
+    console.log("5% discount applied")
+}
+else{
+    console.log("No discount applied")
+}
+
+
+
+
+// ============================================
+
+
+
+// Q8 — Battery Warning
+
+// 100-50   = "Battery Good"
+
+// 49-20   = "Battery Low, plug in soon"
+
+// Below 20  = "Critical! Plug in now!"
+
+// Expected output: "Critical! Plug in now!"
+
+
+
+let battery = 18
+
+
+
+// Write your code here:
+
+if(battery >= 50 && battery <= 100){
+    console.log("Battery Good")
+}
+else if(battery >= 20 && battery <= 49){
+    console.log("Battery Low, plug in soon")
+}
+else if(battery < 20){
+    console.log("Critical! Plug in now!")
+}
+else{
+    console.log("Invalid battery percentage")
+}
+
+
+
+// ============================================
+
+
+
+// Q9 — Weekday or Weekend
+
+// 1-5 = "Weekday, go to school"
+
+// 6-7 = "Weekend, enjoy!"
+
+// else = "Invalid day"
+
+// Expected output: "Weekend, enjoy!"
+
+
+
+let day = 6
+
+
+
+// Write your code here:
+
+if(day >= 1 && day <= 5){
+    console.log("Weekday, go to school")
+}
+else if(day === 6 || day === 7){
+    console.log("Weekend, enjoy!")
+}
+else{
+    console.log("Invalid day")
+}
+
+
+
+// ============================================
+
+
+
+// Q10 — Speed Fine Calculator
+
+// Under 60  = "Safe driving"
+
+// 60 to 80  = "Slight overspeed, warning"
+
+// 81 to 120  = "Fine: Rs 500"
+
+// Above 120  = "Heavy fine: Rs 2000 + license cancelled"
+
+// Expected output: "Fine: Rs 500"
+
+
+
+let speed = 95
+
+
+
+// Write your code here:
+
+if(speed < 60){
+    console.log("Safe driving")
+}
+else if(speed >= 60 && speed <= 80){
+    console.log("Slight overspeed, warning")
+}
+else if(speed >= 81 && speed <= 120){
+    console.log("Fine: Rs 500")
+}
+else if(speed > 120){
+    console.log("Heavy fine: Rs 2000 + license cancelled")
+}
+else{
+    console.log("Invalid speed")
+}
+
+
+
+// ============================================
+
+
+
+// Q11 — Electricity Bill
+
+// Units 0-100  = Rs 5 per unit
+
+// Units 101-300 = Rs 10 per unit
+
+// Units 301+  = Rs 20 per unit
+
+// Print the total bill.
+
+// Expected output: "Total bill: Rs 1500"
+
+
+
+let units = 150
+
+
+
+// Write your code here:
+
+
+if(units >= 0 && units <= 100){
+    let bill = units * 5;
+    console.log("Total bill: Rs " + bill);
+}
+else if(units >= 101 && units <= 300){
+    let bill = units * 10;
+    console.log("Total bill: Rs " + bill);
+}
+else if(units > 300){
+    let bill = units * 20;
+    console.log("Total bill: Rs " + bill);
+}
+else{
+    console.log("Invalid number of units");
+}
+
+
+// ============================================
+
+
+
+// Q12 — Login Check
+
+// Username must be "student" AND password must be "abc123"
+
+// If username wrong = "Username not found"
+
+// If password wrong = "Wrong password"
+
+// If both correct  = "Login successful!"
+
+// Expected output: "Login successful!"ssssssss
+
+
+
+let username = "student"
+
+let password = "abc123"
+
+
+
+// Write your code here:
+
+if(username === "student" && password === "abc123"){
+    console.log("Login successful!")
+}
+else if(username !== "student"){
+    console.log("Username not found")
+}
+else if(password !== "abc123"){
+    console.log("Wrong password")
+}
+
+
+
+// ============================================
+
+
+
+// Q13 — Triangle Type
+
+// All 3 sides equal  = "Equilateral triangle"
+
+// Any 2 sides equal  = "Isosceles triangle"
+
+// No sides equal   = "Scalene triangle"
+
+// Expected output: "Isosceles triangle"
+
+
+
+let side1 = 5
+
+let side2 = 5
+
+let side3 = 8
+
+
+
+// Write your code here:
+
+
+if(side1 === side2 && side2 === side3){
+    console.log("Equilateral triangle")
+}
+else if(side1 === side2 || side2 === side3 || side1 === side3){
+    console.log("Isosceles triangle")
+}
+else{
+    console.log("Scalene triangle")
+}
+
+
+// ============================================
+
+
+
+// Q14 — Shopping Cart
+
+// Items 10+ AND Member = true → "20% discount"
+
+// Items 10+ AND Member = false → "10% discount"
+
+// Items below 10 AND Member = true → "5% discount"
+
+// Items below 10 AND Member = false → "No discount"
+
+// Expected output: "10% discount"
+
+
+
+let items  = 12
+
+let isMember = false
+
+
+
+// Write your code here:
+
+if(items >= 10 && isMember){
+    console.log("20% discount")
+}
+else if(items >= 10 && !isMember){
+    console.log("10% discount")
+}
+else if(items < 10 && isMember){
+    console.log("5% discount")
+}
+else{
+    console.log("No discount")
+}
+
+
+
+// ============================================
+
+// END OF ASSIGNMENT
+</script>
+
+
+</body>
+
+</html>

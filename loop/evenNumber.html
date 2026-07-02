@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="number" id="number">
+<button id="evenno"> show even number</button>
+<div id="table"></div>
+
+</body>
+<script>
+let numberinput=document.getElementById("number")
+let evenBtn=document.getElementById("evenno")
+let div=document.getElementById("table")
+
+let even=()=>{
+
+let number=numberinput.value
+div.innerHTML=""
+for(x=1; x<=number;x++){
+if(x%2===0){
+
+    let para="<p>"+x+"</p>"
+div.innerHTML+=para
+
+}
+
+
+}
+}
+evenBtn.addEventListener("click",even               )
+
+
+
+
+
+</script>
+</html>

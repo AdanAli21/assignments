@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="enter number" id="number">
+    <button id="sum">sum</button>
+    <div id="table"></div>
+</body>
+<script>
+let NUMBER=document.getElementById("number")
+let sumBtn=document.getElementById("sum")
+let div=document.getElementById("table")
+let sum=()=>{
+let number=NUMBER.value 
+div.innerHTML=""
+let sum=0
+for(x=1;x<=number;x++){
+sum=sum+x
+
+let para="<p=>"+sum +"</p>"
+div.innerHTML+=para
+}
+
+
+}
+
+sumBtn.addEventListener("click",sum)
+</script>
+</html>

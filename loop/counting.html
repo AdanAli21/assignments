@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input placeholder="number" id="number">
+<button id="counting">start counting</button>
+<div id="table"></div>
+</body>
+<script>
+    let NUMBER=document.getElementById("number")
+let countingBtn=document.getElementById("counting")
+let div=document.getElementById("table")
+let counting=()=>{
+    let number=NUMBER.value 
+    div.innerHTML+=""
+for(x=1;x<=number;x++){
+    let para ="<p>"+x+"</p>"
+div.innerHTML+=para
+}
+
+}
+
+countingBtn.addEventListener("click",counting)
+</script>
+</html>
