@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="table of" id="table_of">
+<input placeholder="NO OF TIMES" id="No_Of_Times">
+<button id="tableshow">show table</button>
+<div id="table"></div>
+</body>
+<script>
+let tableof=document.getElementById("table_of")
+let nooftimes=document.getElementById("No_Of_Times")
+let tableBtn=document.getElementById("tableshow")
+let tablediv=document.getElementById("table")
+
+let showtable=()=>{
+let TABLEOFvalue=tableof.value
+let NOOFTIME=nooftimes.value
+tablediv.innerHTML =""
+
+for(x=1;x<NOOFTIME;x++){
+let para="<p>"+TABLEOFvalue + "x" + x + "=" + x*TABLEOFvalue +
+"</p>"
+tablediv.innerHTML+=para
+}
+}
+
+tableBtn.addEventListener("click",showtable)
+
+</script>
+</html>

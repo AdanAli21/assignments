@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       
+<h1 id="counter">Age: 18</h1>
+<button id="incrementBTN">Birthday</button>
+<button id="decreaseBTN">Go Back One Year</button>
+<script>
+const counterH1 = document.querySelector("#counter");
+const incrementBtn = document.querySelector("#incrementBTN");
+const decreaseBtn = document.querySelector("#decreaseBTN");
+let age = 18;
+
+function updateAgeHeading() {
+    counterH1.innerHTML = `Age: ${age}`;
+}
+
+function incrementAge() {
+    age += 1;
+    updateAgeHeading();
+}
+
+function decrementAge() {
+    age -= 1;
+    updateAgeHeading();
+}
+
+incrementBtn.addEventListener("click", incrementAge);
+decreaseBtn.addEventListener("click", decrementAge);
+</script>
+
+</body>
+</html>

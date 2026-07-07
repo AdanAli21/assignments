@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="counter">50</h1>
+<button id="bonusButton">bonus marks</button>
+   <button id="deductButton">deduct marks</button> 
+<script>
+let counterh1 = document.querySelector("#counter")
+let bonusButton = document.querySelector("#bonusButton")
+let deductButton = document.querySelector("#deductButton")  
+
+console.log(counterh1)
+console.log(bonusButton)
+console.log(deductButton)
+let counter=counterh1.innerHTML
+let bonus=()=>{if(counter<100){
+    counterh1.innerHTML=+counterh1.innerHTML+5
+}
+}
+
+
+
+let deduct=()=>{if(counter>0){
+    counterh1.innerHTML=counterh1.innerHTML-5
+}
+}
+
+ bonusButton.addEventListener("click",bonus)
+deductButton.addEventListener("click",deduct)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hi </h1>
+    <script>
+        
+        console.log("question 1")
+        let cities = ["karachi", "lahore", "islamabad", "multan", "faisalabad"]
+        console.log("before push=", cities)
+        cities.push("heydrabad", "bhawalpur")
+        console.log("after push=", cities)
+
+        console.log("question 2")
+        let food = ["burger", "pizza", "pasta", "biryani", "qorma", "pulao"]
+        console.log("before pop=", food)
+        food.pop()
+        console.log("after pop=", food)
+
+        console.log("question 3")
+        let colors=["red","blue","black","brown","yellow"]
+        console.log("before shift=", colors)
+        colors.shift()
+        console.log("after shift=", colors)
+        console.log("question 4")
+
+// Question 4
+console.log("Question 4");
+
+let languages = ["JavaScript", "Python", "Java", "C++", "PHP"];
+
+console.log("Before =>", languages);
+
+languages.unshift("HTML", "CSS");
+
+console.log("After =>", languages);
+
+
+// Question 5
+console.log("Question 5");
+
+let fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes", "Peach", "Kiwi", "Cherry"];
+
+console.log("Original Array =>", fruits);
+
+let copyFruits = fruits.slice(2, 6);
+
+console.log("Copied Array =>", copyFruits);
+
+
+// Question 6
+console.log("Question 6");
+
+let animals = ["Cat", "Dog", "Cow", "Goat", "Horse", "Elephant", "Monkey"];
+
+console.log("Before =>", animals);
+
+animals.splice(2, 0, "Lion", "Tiger");
+
+console.log("After =>", animals);
+
+
+// Question 7
+console.log("Question 7");
+
+let cars = ["Toyota", "Honda", "BMW", "Audi", "Kia", "Suzuki"];
+
+console.log("Before =>", cars);
+
+cars.splice(2, 2);
+
+console.log("After =>", cars);
+
+
+// Question 8
+console.log("Question 8");
+
+let subjects = ["Math", "English", "Physics", "Chemistry", "Biology", "Urdu"];
+
+console.log("Before =>", subjects);
+
+subjects.splice(1, 1, "Computer Science");
+
+console.log("After =>", subjects);
+
+
+// Question 9
+console.log("Question 9");
+
+let students = ["Ali", "Hamza", "Usman", "Bilal", "Ayan", "Zain", "Saad", "Ahmed", "Farhan", "Hassan"];
+
+students.push("Asad", "Talha");
+students.shift();
+students.unshift("Ahmed");
+students.pop();
+
+console.log("Final Array =>");
+
+for (let x = 0; x < students.length; x++) {
+    console.log(students[x]);
+}
+
+
+// Question 10
+console.log("Question 10");
+
+let mobiles = ["Samsung", "Vivo", "Oppo", "Realme", "Infinix", "Tecno", "Nokia", "Xiaomi"];
+
+mobiles.push("OnePlus");
+mobiles.shift();
+mobiles.unshift("Apple");
+
+let copyMobiles = mobiles.slice(4);
+
+mobiles.splice(3, 0, "Nothing");
+
+console.log("Updated Mobile Array =>");
+
+for (let x = 0; x < mobiles.length; x++) {
+    console.log(mobiles[x]);
+}
+
+console.log("Copied Array =>");
+
+for (let x = 0; x < copyMobiles.length; x++) {
+    console.log(copyMobiles[x]);
+}
+
+
+// Bonus Challenge
+console.log("Bonus Challenge");
+
+let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+numbers.push(100, 200);
+numbers.shift();
+numbers.unshift(0);
+
+let copyNumbers = numbers.slice(3, 8);
+
+numbers.splice(3, 1, 999);
+
+console.log("Final Array =>");
+
+for (let x = 0; x < numbers.length; x++) {
+    console.log(numbers[x]);
+}
+
+console.log("Copied Array =>");
+
+for (let x = 0; x < copyNumbers.length; x++) {
+    console.log(copyNumbers[x]);
+}
+
+
+
+    </script>
+</body>
+
+</html>
