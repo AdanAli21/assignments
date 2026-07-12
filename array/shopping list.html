@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+
+<body>
+
+    <input placeholder="Item Name" id="itemname">
+    <button id="itembutton">Add Item</button>
+
+    <div id="div"></div>
+   
+
+    <script>
+
+        let itemname = document.getElementById("itemname");
+        let iteBtn = document.getElementById("itembutton");
+        let div = document.getElementById("div");
+        
+
+        let shoppingList = ["Milk", "Egg", "Bread", "Rice", "Sugar"];
+
+        function showItems() {
+
+            div.innerHTML = "";
+
+            for (let x = 0; x < shoppingList.length; x++) {
+                div.innerHTML += "<p>" + shoppingList[x] + "</p>";
+            }
+
+            total.innerHTML = "Total Items: " + shoppingList.length;
+        }
+
+        function additems() {
+
+            let item_value = itemname.value;
+
+            if (item_value != "") {
+
+                shoppingList.push(item_value);
+
+                showItems();
+
+                itemname.value = "";
+            }
+
+        }
+
+        iteBtn.addEventListener("click", additems);
+
+        showItems();
+
+    </script>
+
+</body>
+
+</html>

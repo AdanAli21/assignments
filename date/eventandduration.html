@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Countdown & Duration Calculator</title>
+</head>
+<body>
+
+    <h1>Event Countdown & Duration Calculator</h1>
+
+    <label for="todayInput">
+        Today's Date
+    </label>
+    <br>
+    <input type="date" id="todayInput">
+
+    <br><br>
+
+    <label for="eventInput">
+        Event Date
+    </label>
+    <br>
+    <input type="date" id="eventInput">
+
+    <br><br>
+
+    <button id="calculateButton">
+        Calculate Remaining Time
+    </button>
+
+    <div id="result"></div>
+
+    <script>
+
+        let todayInput =
+            document.getElementById("todayInput")
+
+        let eventInput =
+            document.getElementById("eventInput")
+
+        let calculateButton =
+            document.getElementById("calculateButton")
+
+        let result =
+            document.getElementById("result")
+
+        let calculateTime = () => {
+
+            let todayDate =
+                new Date(todayInput.value)
+
+            let eventDate =
+                new Date(eventInput.value)
+
+            let todayMilliseconds =
+                todayDate.getTime()
+
+            let eventMilliseconds =
+                eventDate.getTime()
+
+            let milliseconds =
+                eventMilliseconds -
+                todayMilliseconds
+
+            let seconds =
+                milliseconds / 1000
+
+            let minutes =
+                milliseconds / 1000 / 60
+
+            let hours =
+                milliseconds / 1000 / 60 / 60
+
+            let days =
+                milliseconds / 1000 / 60 / 60 / 24
+
+            let months =
+                milliseconds / 1000 / 60 / 60 / 24 / 30
+
+            let years =
+                milliseconds / 1000 / 60 / 60 / 24 / 30 / 12
+
+            result.innerHTML = `
+                <p>Milliseconds : ${milliseconds}</p>
+                <p>Seconds : ${seconds}</p>
+                <p>Minutes : ${minutes}</p>
+                <p>Hours : ${hours}</p>
+                <p>Days : ${days}</p>
+                <p>Months : ${months}</p>
+                <p>Years : ${years}</p>
+            `
+        }
+
+        calculateButton.addEventListener(
+            "click",
+            calculateTime
+        )
+
+    </script>
+
+</body>
+</html>
