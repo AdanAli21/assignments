@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Operator</title>
+</head>
+
+<body>
+
+    <h1>Student Operator</h1>
+
+    <input id="studentName" placeholder="Student Name">
+    <input id="city" placeholder="City">
+    <input id="shortinfo" placeholder="Short Info">
+
+    <br><br>
+
+    <button id="btn">Format Information</button>
+    <button id="checkBtn">Check Name</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        let studentName = document.getElementById("studentName")
+        let city = document.getElementById("city")
+        let shortinfo = document.getElementById("shortinfo")
+
+        let btn = document.getElementById("btn")
+        let checkBtn = document.getElementById("checkBtn")
+
+        let result = document.getElementById("result")
+
+        let operator = () => {
+
+            let studentNamevalue = studentName.value
+            let cityValue = city.value
+            let shortintro = shortinfo.value
+
+            let trim = studentNamevalue.trim()
+
+            let length = trim.length
+
+            let slice = trim.slice(0, trim.indexOf(" "))
+
+            if (trim.indexOf(" ") == -1) {
+                slice = trim
+            }
+
+            let upperName = trim.toUpperCase()
+
+            let cityName = cityValue.toLowerCase()
+
+            let replaceIntro =
+                shortintro.replaceAll("student", "developer")
+
+            let substring =
+                replaceIntro.substring(0, 20)
+
+            result.innerHTML = `
+                <p>Student Name : ${trim}</p>
+                <p>Length : ${length}</p>
+                <p>First Name : ${slice}</p>
+                <p>Upper Name : ${upperName}</p>
+                <p>City : ${cityName}</p>
+                <p>Updated Intro : ${replaceIntro}</p>
+                <p>First 20 Characters : ${substring}</p>
+            `
+        }
+
+        let checkName = () => {
+
+            let trim = studentName.value.trim()
+
+            if (trim.indexOf("Bilal") != -1) {
+                alert(`${trim} is present in the name.`)
+            }
+            else {
+                alert(`${trim} is not present.`)
+            }
+        }
+
+        btn.addEventListener("click", operator)
+        checkBtn.addEventListener("click", checkName)
+
+    </script>
+
+</body>
+
+</html>
