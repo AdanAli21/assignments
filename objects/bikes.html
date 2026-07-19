@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Registry</title>
+
+    <style>
+        body {
+            background-color: #14171c;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .intake-fields {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+        }
+
+        #bikes_list {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .bike-card {
+            width: 250px;
+            background: #1e222a;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid gray;
+        }
+
+        .bike-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Bike Registry</h1>
+
+    <div class="intake-fields">
+        <input type="text" placeholder="Bike Name" id="bike_name">
+
+        <input type="text" placeholder="Owner Name" id="owner_name">
+
+        <input type="url" placeholder="Bike Image URL" id="bike_img">
+
+        <button id="addBikeBtn">Add Bike</button>
+    </div>
+
+    <div id="bikes_list"></div>
+
+
+    <script>
+
+        let bikes_list = document.getElementById("bikes_list")
+        let bike_name = document.getElementById("bike_name")
+        let owner_name = document.getElementById("owner_name")
+        let bike_img = document.getElementById("bike_img")
+        let add_bike_btn = document.getElementById("addBikeBtn")
+
+
+        let bikes = [
+
+            {
+                name: "Honda CG 125",
+                ownerName: "Ali",
+                thumbnail: "https://www.atlashonda.com.pk/wp-content/uploads/2021/04/cg125-self-red-product-picture.webp"
+            },
+
+            {
+                name: "Yamaha YBR 125",
+                ownerName: "Ahmed",
+                thumbnail: "https://cache4.pakwheels.com/system/bike_model_pictures/3497/original/2.png?1753961831"
+            },
+
+            {
+                name: "Honda CB 150F",
+                ownerName: "Usman",
+                thumbnail: "https://cache4.pakwheels.com/system/bike_model_pictures/3540/original/Cover.png?1756880979"
+            }
+
+        ]
+
+
+        let renderBikes = () => {
+
+            bikes_list.innerHTML = ""
+
+            bikes.forEach((data) => {
+
+                let card = `
+                
+                <div class="bike-card">
+
+                    <img src="${data.thumbnail}" 
+                    onerror="this.src='https://placehold.co/250x170?text=No+Image'">
+
+                    <div class="info">
+                        <h2>${data.name}</h2>
+                        <p>Owner : ${data.ownerName}</p>
+                    </div>
+
+                </div>
+                
+                `
+
+                bikes_list.innerHTML += card
+
+            })
+
+        }
+
+        renderBikes()
+
+
+        let addBike = () => {
+
+            if (!bike_name.value || !owner_name.value) return
+
+            let bikeObj = {
+
+                name: bike_name.value,
+                ownerName: owner_name.value,
+                thumbnail: bike_img.value || "https://placehold.co/250x170?text=No+Image"
+
+            }
+
+            bikes.push(bikeObj)
+
+            renderBikes()
+
+            bike_name.value = ""
+            owner_name.value = ""
+            bike_img.value = ""
+
+        }
+
+
+        add_bike_btn.addEventListener("click", addBike)
+
+    </script>
+
+</body>
+
+</html>
